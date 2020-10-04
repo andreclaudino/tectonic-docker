@@ -13,7 +13,7 @@ RUN cp biber /usr/bin/biber
 ADD manning/ /usr/src/tex/manning/
 ADD uerj/ /usr/src/tex/uerj/
 # first run - keep files for biber
-# RUN cd /usr/src/tex/uerj; tectonic --keep-intermediates --reruns 0 main.tex
+RUN cd /usr/src/tex/uerj; tectonic --keep-intermediates --reruns 0 main.tex
 RUN cd /usr/src/tex/manning; tectonic --keep-intermediates --reruns 0 main.tex
 RUN cd /usr/src/tex/
 
