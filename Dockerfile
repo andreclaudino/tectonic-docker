@@ -19,7 +19,6 @@ RUN cd /usr/src/tex/
 
 FROM alpine:latest
 RUN apk add --update --no-cache harfbuzz libstdc++ fontconfig icu-libs harfbuzz-icu npm make
-RUN npm install -g @mermaid-js/mermaid-cli
 
 COPY --from=builder /usr/bin/tectonic /usr/bin/
 COPY --from=builder /root/.cache/Tectonic/ /root/.cache/Tectonic/
